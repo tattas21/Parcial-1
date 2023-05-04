@@ -336,7 +336,7 @@ def comprar_vehiculo(vehiculos_filtrados, lista, usuario):
                             vehiculo_comprado = actual.vehiculo
                             id = vehiculo_comprado.id
                             lista.eliminar(id)
-                            dato = f"{usuario.email},{fecha_hora},{vehiculo_comprado.marca},{vehiculo_comprado.modelo},{vehiculo_comprado.precio}\n"
+                            dato = f"{usuario.dni},{fecha_hora},{vehiculo_comprado.marca},{vehiculo_comprado.modelo},{vehiculo_comprado.precio}\n"
                             archivo.write(f'{dato}')
                             break
                         actual = actual.siguiente

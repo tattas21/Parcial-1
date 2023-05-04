@@ -1,0 +1,9 @@
+cliente@cliente.com,2023-04-30,tesla,s,60000
+cliente@cliente.com,2023-04-30,bmw,x7,10000
+c@c.com,2023-04-30,mclaren,m100,25000
+c@c.com,2023-04-30,tesla,a,100000
+c@c.com,2023-05-02,bmw,x5,50000
+c@c.com,2023-05-02,bmw,x7,55000
+c@c.com,2023-05-02,audi,q5,52000
+sol@sol.com,2023-05-02,tesla,y,50000
+c@c.com,2023-05-03,peugeot,208,16000

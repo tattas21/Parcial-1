@@ -1,0 +1,15 @@
+utilitario,toyota,hilux,24000,750,mixto,700,TOY-HI_6
+utilitario,mercedes,sprinter,20000,475,trabajo,3000,MER-SP_7
+utilitario,mercedes,sprinter,20000,475,trabajo,3000,MER-SP_8
+deportivo,ford,mustang,40000,580,urbano,250,FOR-mu_9
+deportivo,porsche,911,370000,700,urbano,330,POR-91_10
+deportivo,audi,r8,300000,650,urbano,255,AUD-r8_11
+compacto,toyota,etios,12000,515,urbano,1,TOY-ET_13
+compacto,volkswagen,polo,13500,550,urbano,2,VOL-PO_14
+compacto,ford,focus,28000,600,urbano,3,FOR-FO_15
+van,volkswagen,taos,31000,730,urbano, 8,VOL-TA_16
+deportivo,subaru,wrx,43500,625,urbano,255,SUB-wr_17
+compacto,fiat,cronos,14500,580,urbano,3,FIA-CR_18
+van,bmw,x5,55000,600,urbano, 6,BMW-X5_19
+electrico,tesla,y,48500,320,urbano,12,TES-Y_20
+deportivo,ferrari,f40,550000,530,urbano,270,FER-f4_21

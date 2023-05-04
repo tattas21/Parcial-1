@@ -11,7 +11,13 @@ class Usuario:
     def __str__(self):
         return f"{self.nombre} {self.dni} {self.email}"
 
-
+class Invitado(Usuario):
+    def __init__(self, nombre, dni,email, ingresos):
+        super().__init__(nombre, dni,email, password = None)
+        self.ingresos = 0
+    def __str__(self):
+        return f"{self.nombre} {self.dni} {self.email} {self.ingresos}"
+    
 class administrador(Usuario):
     def __init__(self,nombre,dni,email,password, es_admin):
         super().__init__(nombre,dni,email,password)
@@ -57,6 +63,53 @@ class RegistroUsuarios:
                 print(f"El usuario ya existe")
                 return False
         return None
+    
+class RegistroInvitados:
+    def __init__(self):
+        self.usuarios = []
+        self.archivo = "invitado.txt"
+        self.cargar_usuarios()
+
+    def registrar_usuario(self, usuario):
+        self.usuarios.append(usuario)
+        self.guardar_usuarios()
+
+    def guardar_usuarios(self):
+        with open(self.archivo, "w") as f:
+            for usuario in self.usuarios:
+                f.write(f"{usuario.nombre},{usuario.dni},{usuario.email},{usuario.ingresos}\n")
+        f.close()
+
+    def cargar_usuarios(self):
+        try:
+            with open(self.archivo, "r") as f:
+                for linea in f:
+                    nombre, dni, email, ingresos = linea.strip().split(",")
+                    self.usuarios.append(Invitado(nombre,dni,email,ingresos))
+            f.close()
+        except FileNotFoundError:
+            pass
+    def buscar_usuario(self, email, dni):
+        for usuario in self.usuarios:
+            if usuario.email == email or usuario.dni == dni:
+                print(f"El usuario ya existe")
+                return False
+        return None
+class LoginInvitado:
+    def __init__(self, registro_usuarios):
+        self.registro_usuarios = registro_usuarios
+        self.usuario_actual = None
+
+    def iniciar_sesion(self, email, dni):
+        for usuario in self.registro_usuarios.usuarios:
+            if usuario.email == email and usuario.dni == dni:
+                self.usuario_actual = usuario
+                return True
+        return False
+
+    def cerrar_sesion(self):
+        self.usuario_actual = None
+
 # Ver opcion sin clase
 class Login:
     def __init__(self, registro_usuarios):

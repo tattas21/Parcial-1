@@ -1,5 +1,1 @@
-Tomas Attas,44668578,tattas@sistema.com.ar,1234tomas
-tomas attas,44668577,cliente@cliente.com,1234tomas
-Lucas Rodriguez,44668576,c@c.com,tomas1234
-lionel messi,44668575,lmessi@gmail.com,1234tomas
-s,44556655,sol@sol.com,1234tomas
+lucas rodriguez,12341234,lrodriguez@gmail.com.ar,7
